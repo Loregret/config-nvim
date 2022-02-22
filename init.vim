@@ -171,7 +171,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>#
 
 
 set wildmode=longest,list
-set nowrap
+"set nowrap
 set ignorecase
 set hlsearch	
 set smartcase	
