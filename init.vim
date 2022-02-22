@@ -171,7 +171,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>#
 
 
 set wildmode=longest,list
-"set nowrap
+set nowrap
 set ignorecase
 set hlsearch	
 set smartcase	
@@ -193,7 +193,10 @@ set relativenumber
 set showmatch 
 set clipboard=unnamedplus
 set noswapfile
-
+" set foldmethod=syntax
+" set foldlevel=1
+" set foldclose=all
+" set nofoldenable
 " Plugin manager downloads dir at .../plugged
 
 call plug#begin(expand('~/.config/nvim/plugged'))
@@ -208,6 +211,7 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'numToStr/Comment.nvim'
 
 " AutoComplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -217,6 +221,17 @@ Plug 'habamax/vim-godot'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+" for plugin Comment
+lua require('Comment').setup()
+
+" Godot fold + mapping
+setlocal foldmethod=expr
+setlocal tabstop=4
+nnoremap <buffer> <F4> :GodotRunLast<CR>
+nnoremap <buffer> <F5> :GodotRun<CR>
+nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+nnoremap <buffer> <F7> :GodotRunFZF<CR>
 
 " COLORSHEME
 
