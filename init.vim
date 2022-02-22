@@ -195,10 +195,8 @@ set clipboard=unnamedplus
 set noswapfile
 set foldlevel=0
 " Autosave
-autocmd TextChanged,TextChangedI <buffer> silent write
-" set foldmethod=syntax
-" set foldclose=all
-" set nofoldenable
+"autocmd TextChanged,TextChangedI <buffer> silent write
+
 " Plugin manager downloads dir at .../plugged
 
 call plug#begin(expand('~/.config/nvim/plugged'))
