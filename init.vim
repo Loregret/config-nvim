@@ -193,8 +193,10 @@ set relativenumber
 set showmatch 
 set clipboard=unnamedplus
 set noswapfile
+set foldlevel=0
+" Autosave
+autocmd TextChanged,TextChangedI <buffer> silent write
 " set foldmethod=syntax
-" set foldlevel=1
 " set foldclose=all
 " set nofoldenable
 " Plugin manager downloads dir at .../plugged
