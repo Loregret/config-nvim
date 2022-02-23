@@ -10,7 +10,7 @@ syntax on
 
 
 set wildmode=longest,list
-set nowrap
+" set nowrap
 set ignorecase
 set hlsearch	
 set smartcase	
@@ -64,6 +64,10 @@ call plug#end()
 
 " for plugin Comment
 lua require('Comment').setup()
+" pretty fold
+lua require('pretty-fold').setup()
+lua require('pretty-fold.preview').setup()
+
 
 " Godot fold + mapping
 set foldlevel=20
