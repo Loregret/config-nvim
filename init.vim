@@ -53,6 +53,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'numToStr/Comment.nvim'
 Plug 'anuvyklack/pretty-fold.nvim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'tpope/vim-fugitive'
 
 " AutoComplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
