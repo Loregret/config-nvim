@@ -30,7 +30,7 @@ set backspace=indent,eol,start
 set number	
 set relativenumber
 set showmatch 
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 set noswapfile
 
 " Autosave
