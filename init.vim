@@ -1,10 +1,7 @@
-" reset to vim-defaults
 if &compatible          " only if not set before:
   set nocompatible      " use vim-defaults instead of vi-defaults (easier, more user friendly)
 endif
 
-" Enabling filetype support provides filetype-specific indenting,
-" syntax highlighting, omni-completion and other useful settings.
 filetype plugin indent on  
 syntax on
 
@@ -39,33 +36,32 @@ set noswapfile
 
 call plug#begin(expand('~/.config/nvim/plugged'))
 
-" Customization
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+	" Customization
+	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 
-" Usability
-Plug 'tpope/vim-surround'
-Plug 'airblade/vim-gitgutter'
-Plug 'preservim/nerdtree'
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'numToStr/Comment.nvim'
-Plug 'anuvyklack/pretty-fold.nvim'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'tpope/vim-fugitive'
+	" Usability
+	Plug 'tpope/vim-surround'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'preservim/nerdtree'
+	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'numToStr/Comment.nvim'
+	Plug 'anuvyklack/pretty-fold.nvim'
+	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+	Plug 'tpope/vim-fugitive'
 
-" AutoComplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'habamax/vim-godot'
+	" AutoComplete
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'habamax/vim-godot'
 
-" dev icons always at bottom
-Plug 'ryanoasis/vim-devicons'
+	" dev icons always at bottom
+	Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-" for plugin Comment
+" lua setup
 lua require('Comment').setup()
-" pretty fold
 lua require('pretty-fold').setup()
 lua require('pretty-fold.preview').setup()
 
