@@ -8,7 +8,6 @@ endif
 filetype plugin indent on  
 syntax on
 
-
 set wildmode=longest,list
 " set nowrap
 set ignorecase
@@ -70,44 +69,9 @@ lua require('Comment').setup()
 lua require('pretty-fold').setup()
 lua require('pretty-fold.preview').setup()
 
-
-" Godot fold + mapping
-set foldlevel=20
-setlocal foldmethod=expr
-setlocal tabstop=4
-nnoremap <buffer> <F4> :GodotRunLast<CR>
-nnoremap <buffer> <F5> :GodotRun<CR>
-nnoremap <buffer> <F6> :GodotRunCurrent<CR>
-nnoremap <buffer> <F7> :GodotRunFZF<CR>
-
 " COC configuration + mapping
 source ~/.config/nvim/coc_config.vim
-
-" AUTOCLOSE BRACKETS
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
-" COLORSHEME
-
-" Example config in VimScript
-let g:tokyonight_style = "storm"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
-" Change the "hint" color to the "orange" color, and make the "error" color bright red
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-
-" Load the colorscheme
-colorscheme tokyonight
-
-
-" Airline theme
-let g:airline_theme='supernova'
+" ColorSheme
+source ~/.config/nvim/colorsheme.vim
+" Autoclose brackets
+source ~/.config/nvim/autoclose_brackets.vim
