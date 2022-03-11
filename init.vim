@@ -5,69 +5,62 @@ endif
 filetype plugin indent on  
 syntax on
 
-set wildmode=longest,list
-" set nowrap
-set ignorecase
+"set nowrap
+set autoindent	
+set backspace=indent,eol,start	
+set clipboard=unnamedplus
 set hlsearch	
-set smartcase	
+set ignorecase
 set ignorecase	
 set incsearch	
-set tabstop=4 
-set scrolloff=2 
 set magic
-set autoindent	
+set noswapfile
+set number	
+set relativenumber
+set ruler	
+set scrolloff=2 
 set shiftwidth=4
+set showmatch 
+set smartcase	
 set smartindent	
 set smarttab	
 set softtabstop=4	
-set ruler	
+set tabstop=4 
 set undolevels=1000	
-set backspace=indent,eol,start	
-set number	
-set relativenumber
-set showmatch 
-set clipboard=unnamedplus
-set noswapfile
+set wildmode=longest,list
 
-" Autosave
-"autocmd TextChanged,TextChangedI <buffer> silent write
 
-" Plugin manager downloads dir at .../plugged
-
-call plug#begin(expand('~/.config/nvim/plugged'))
+call plug#begin(expand('~/.config/nvim/plugged'))	" Plugin manager downloads dir at .../plugged
 
 	" Customization
 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-
 	" Usability
-	Plug 'tpope/vim-surround'
 	Plug 'airblade/vim-gitgutter'
-	Plug 'preservim/nerdtree'
-	Plug 'nvim-treesitter/nvim-treesitter'
-	Plug 'numToStr/Comment.nvim'
 	Plug 'anuvyklack/pretty-fold.nvim'
+	Plug 'numToStr/Comment.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'preservim/nerdtree'
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'tpope/vim-fugitive'
-
+	Plug 'tpope/vim-surround'
 	" AutoComplete
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'habamax/vim-godot'
-
-	" dev icons always at bottom
+	" Dev icons always at bottom
 	Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-" lua setup
+" Lua setup
 lua require('Comment').setup()
 lua require('pretty-fold').setup()
 lua require('pretty-fold.preview').setup()
 
 " COC configuration + mapping
 source ~/.config/nvim/coc_config.vim
-" ColorSheme
+" Colorsheme
 source ~/.config/nvim/colorsheme.vim
 " Autoclose brackets
 source ~/.config/nvim/autoclose_brackets.vim
