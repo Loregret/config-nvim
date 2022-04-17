@@ -39,10 +39,9 @@ call plug#begin(expand('~/.config/nvim/plugged'))	" Plugin manager downloads dir
 	" Usability
 	Plug 'airblade/vim-gitgutter'
 	Plug 'anuvyklack/pretty-fold.nvim'
-	Plug 'numToStr/Comment.nvim'
+	Plug 'numToStr/Comment.nvim', { 'tag': 'v0.6'}
 	Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'preservim/nerdtree'
-	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-surround'
 	" AutoComplete
