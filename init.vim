@@ -27,7 +27,15 @@ set smarttab
 set softtabstop=4	
 set tabstop=4 
 set undolevels=1000	
+set cursorcolumn
+set incsearch
+	" Wildmode
+set wildmenu
 set wildmode=longest,list
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+	" turns cursorline on Insert mode
+autocmd InsertEnter,InsertLeave * set cul!
 
 
 call plug#begin(expand('~/.config/nvim/plugged'))	" Plugin manager downloads dir at .../plugged
