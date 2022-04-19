@@ -37,8 +37,8 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 	" turns cursorline on Insert mode
 autocmd InsertEnter,InsertLeave * set cul!
 
-
-call plug#begin(expand('~/.config/nvim/plugged'))	" Plugin manager downloads dir at .../plugged
+" Plugin manager downloads dir at .../plugged
+call plug#begin(expand('~/.config/nvim/plugged'))
 
 	" Customization
 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
