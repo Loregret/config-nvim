@@ -47,6 +47,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 	" Usability
 	Plug 'airblade/vim-gitgutter'
 	Plug 'anuvyklack/pretty-fold.nvim'
+	Plug 'anuvyklack/nvim-keymap-amend'
 	Plug 'numToStr/Comment.nvim', { 'tag': 'v0.6'}
 	Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'preservim/nerdtree'
